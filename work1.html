@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function math(){
+        var division=document.getElementById("division");   
+        var multiplication=document.getElementById("multiplication");   
+        var num1=document.getElementById("num1").value;   
+        var num2=document.getElementById("num2").value;
+        multiplication.innerHTML="Number when multiplied: " + Number(num1) * Number(num2);   
+        division.innerHTML="Number when divided: " + Number(num1) / Number(num2);
+    }
+
+    function calculateArea() {
+        var s1 = 5;
+        var s2 = 6;
+        var s3 = 7;
+        var s = (s1 + s2 + s3) / 2;
+        var area = Math.sqrt(s * (s - s1) * (s - s2) * (s - s3));
+
+        document.getElementById("result").innerHTML = "The area of the triangle is: " + area;
+    }
+
+    function strings(){
+        var string = "class";
+        document.getElementById("stringResult").innerHTML = "JavaScript " + string;  
+    }
+</script>
+<body>
+    <form>
+        <h1>Calculator</h1>
+        <h3>Number1<input type="text" id="num1"></h3>
+        <h3>Number2<input type="text" id="num2"></h3>
+        
+        <button type="button" onclick="math()">Calculate</button>
+        <p id="division"></p><br>
+        <p id="multiplication"></p>
+    </form>
+
+    <form>
+        <h1>Triangle Area Calculator</h1> 
+        <h3>side1=5</h3>
+        <h3>side2=6</h3>
+        <h3>side3=7</h3>
+        <button type="button" onclick="calculateArea()">Calculate Area</button>
+        <div id="result"></div>
+    </form>
+
+    <form>
+        <h2>3. Write a JavaScript program to create another string by adding "JavaScript" in front of a given string</h2>
+        <h3>String one= "JavaScript"</h3>
+        <h3>String two= "class"</h3>
+
+        <!-- Correcting the function call -->
+        <button type="button" onclick="strings()">Add the strings</button><br>
+        <div id="stringResult"></div>
+    </form>
+    
+</body>
+</html>
+
